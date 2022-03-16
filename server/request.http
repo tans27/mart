@@ -2,8 +2,14 @@ POST http://localhost:5000/api/auth/register
 Content-Type: application/json
 
 {
-    "username":"tans",
-    "password":"123"
+    "username":"tans1",
+    "password":"123",
+    "firstname":"Le",
+    "lastname":"Duc",
+    "gender": 1,
+    "email": "tans@gmail.com",
+    "phone": "0123456789",
+    "address": "HN"
 }
 
 ###
@@ -24,4 +30,23 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjMxO
     "name":"Khan giay 3",
     "url":"google.com",
     "code":"K03"
+}
+###
+POST http://localhost:5000/api/product
+Content-Type: application/json
+
+{
+    "name":"Khan giay 3",
+    "price":20000,
+    "description":"Khan giay la",
+    "url":"sp1",
+    "category":"Khan giay"
+}
+
+###
+GET http://localhost:5000/api/product
+Content-Type: application/json
+
+{
+    "category":"Khan giay"
 }

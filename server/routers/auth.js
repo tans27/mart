@@ -2,7 +2,6 @@ const express = require("express");
 const router = express.Router();
 const argon2 = require("argon2");
 const jwt = require("jsonwebtoken");
-
 const User = require("../models/User");
 
 // @route POST api/auth/register
@@ -10,7 +9,17 @@ const User = require("../models/User");
 // @access public
 
 router.post("/register", async (req, res) => {
-  const { username, password } = req.body;
+  const {
+    username,
+    password,
+    firstname,
+    lastname,
+    gender,
+    phone,
+    email,
+    address,
+    usertype,
+  } = req.body;
 
   // Simple validation
   if (!username || !password) {
@@ -28,9 +37,27 @@ router.post("/register", async (req, res) => {
         .json({ success: false, message: "User already exists" });
     }
 
+    const phoneNumber = await User.findOne({ phone: phone });
+
+    if (phoneNumber) {
+      return res
+        .status(400)
+        .json({ success: false, message: "Phone already exists" });
+    }
+
     // All good
     const hashedPassword = await argon2.hash(password);
-    const newUser = new User({ username: username, password: hashedPassword });
+    const newUser = new User({
+      username,
+      password: hashedPassword,
+      firstname,
+      lastname,
+      phone,
+      address,
+      email,
+      gender,
+      usertype: usertype || 1,
+    });
     await newUser.save();
 
     // Return token
@@ -53,14 +80,14 @@ router.post("/register", async (req, res) => {
 // @desc login user
 // @access public
 router.post("/login", async (req, res) => {
-    const { username, password } = req.body;
-  
-    // Simple validation
-    if (!username || !password) {
-      return res
-        .status(400)
-        .json({ success: false, message: "Invalid username or password" });
-    }
+  const { username, password } = req.body;
+
+  // Simple validation
+  if (!username || !password) {
+    return res
+      .status(400)
+      .json({ success: false, message: "Invalid username or password" });
+  }
   try {
     //   Check if existing user
     const user = await User.findOne({ username });

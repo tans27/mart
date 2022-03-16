@@ -1,12 +1,12 @@
 const express = require("express");
 const router = express.Router();
-const verifyToken = require("../middlewares/auth")
+const verifyToken = require("../middlewares/auth");
 const Category = require("../models/Category");
 
 // @route POST api/category
 // @desc Create a new Category
 // @access private
-router.post("/",verifyToken, async (req, res) => {
+router.post("/", verifyToken, async (req, res) => {
   const { name, url, code } = req.body;
 
   if (!name || !code) {
@@ -32,7 +32,7 @@ router.post("/",verifyToken, async (req, res) => {
     const newCategory = new Category({
       name,
       url: url.startsWith("http://") ? url : `http://${url}`,
-      code
+      code,
     });
 
     await newCategory.save();

@@ -1421,7 +1421,7 @@ ol {
 	margin-bottom: 10px;
 }
 
-.sidebar__item__size label {
+.sidebar__item__size label.size-bar {
 	font-size: 12px;
 	color: #6f6f6f;
 	display: inline-block;
