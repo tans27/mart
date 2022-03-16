@@ -6,7 +6,7 @@ const ShoppingCart = () => {
     <>
       <section
         className="breadcrumb-section set-bg"
-        data-setbg="public/assets/img/breadcrumb.jpg"
+        data-setbg="assets/img/breadcrumb.jpg"
       >
         <div className="container">
           <div className="row">

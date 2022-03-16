@@ -16,11 +16,11 @@ const SiteLayout = () => {
       <div>
         <div>
             <Routes>
-                <Route exact path="*" element={<Home/>}/>
-                <Route path="shop" element={<Shop />}/>
-                <Route path="shop-detail" element={<ShopDetail />}/>
-                <Route path="shopping-cart" element={<ShoppingCart />}/>
-                <Route path="checkout" element={<Checkout />}/>
+                <Route exact path="/*" element={<Home/>}/>
+                <Route path="/shop" element={<Shop />}/>
+                <Route path="/shop-detail" element={<ShopDetail />}/>
+                <Route path="/shopping-cart" element={<ShoppingCart />}/>
+                <Route path="/checkout" element={<Checkout />}/>
             </Routes>
         </div>
       </div>

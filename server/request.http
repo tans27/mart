@@ -1,0 +1,27 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username":"tans",
+    "password":"123"
+}
+
+###
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username":"tans",
+    "password":"123"
+}
+
+###
+POST http://localhost:5000/api/category
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjMxODAzNDI0OWFlN2U4MTJlOGI5N2YiLCJpYXQiOjE2NDc0MTYzMzV9.516KwMtHAwJaXB6XTp5ULylE9AxCC6VEJy5wLsABQYw
+
+{
+    "name":"Khan giay 3",
+    "url":"google.com",
+    "code":"K03"
+}

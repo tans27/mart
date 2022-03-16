@@ -4,48 +4,45 @@ import { Link } from 'react-router-dom'
 
 const Login = () => {
   return (
-    <div className="main">
-        <div className="container a-container" id="a-container">
-            <form className="form" id="a-form" method="" action="">
-                <h2 className="form_title title">Create Account</h2>
-                <div className="form__icons">
-                    <img className="form__icon" src="" />
+    <section className="sign-in">
+            <div className="container-form">
+                <div className="signin-content">
+                    <div className="signin-image">
+                        <figure><img src="assets/img/signin-image.jpg" alt="sign up"/></figure>
+                        <Link to="/signup" className="signup-image-link"><u>Create an account</u></Link>
+                    </div>
+
+                    <div className="signin-form">
+                        <h2 className="form-title">Sign up</h2>
+                        <form method="POST" className="register-form" id="login-form">
+                            <div className="form-group">
+                                <label htmlFor="your_name"><i className="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="text" className="form-input" name="your_name" id="your_name" placeholder="Your Name"/>
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="your_pass"><i className="zmdi zmdi-lock"></i></label>
+                                <input type="password" className="form-input" name="your_pass" id="your_pass" placeholder="Password"/>
+                            </div>
+                            <div className="form-group">
+                                <input type="checkbox" name="remember-me" id="remember-me" className="agree-term" />
+                                <label htmlFor="remember-me" className="label-agree-term"><span><span></span></span>Remember me</label>
+                            </div>
+                            <div className="form-group form-button">
+                                <input type="submit" name="signin" id="signin" className="form-input form-submit" value="Log in"/>
+                            </div>
+                        </form>
+                        <div className="social-login">
+                            <span className="social-label">Or login with</span>
+                            <ul className="socials">
+                                <li><Link to="#"><i className="display-flex-center zmdi zmdi-facebook"></i></Link></li>
+                                <li><Link to="#"><i className="display-flex-center zmdi zmdi-twitter"></i></Link></li>
+                                <li><Link to="#"><i className="display-flex-center zmdi zmdi-google"></i></Link></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <span className="form__span">or use email for registration</span>
-                <input className="form__input" type="text" placeholder="Name"/>
-                <input className="form__input" type="text" placeholder="Email"/>
-                <input className="form__input" type="text" placeholder="Password"/>
-                <button className="form__button button submit">SIGN UP</button>
-            </form>
-        </div>
-        <div className="container b-container" id="b-container">
-            <form className="form" id="b-form" method="" action="">
-                <h2 className="form_title title">Sign in to Diprella</h2>
-                <div className="form__icons">
-                    <img className="form__icon" src=""/>
-                </div>
-                <span className="form__span">or use your email account</span>
-                <input className="form__input" type="text" placeholder="Email"/>
-                <input className="form__input" type="text" placeholder="Password"/>
-                <Link to="/" className="form__link">Forgot your password?</Link>
-                <button className="form__button button submit">SIGN IN</button>
-            </form>
-        </div>
-        <div className="switch" id="switch-cnt">
-            <div className="switch__circle"></div>
-            <div className="switch__circle switch__circle--t"></div>
-            <div className="switch__container" id="switch-c1">
-                <h2 className="switch__title title">Welcome Back !</h2>
-                <p className="switch__description description">To keep connected with us please login with your personal info</p>
-                <button className="switch__button button switch-btn">SIGN IN</button>
             </div>
-            <div className="switch__container is-hidden" id="switch-c2">
-                <h2 className="switch__title title">Hello Friend !</h2>
-                <p className="switch__description description">Enter your personal details and start journey with us</p>
-                <button className="switch__button button switch-btn">SIGN UP</button>
-            </div>
-        </div>
-    </div>
+        </section>
   );
 }
 

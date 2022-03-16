@@ -15,7 +15,7 @@ const Shop = () => {
                             <div className="breadcrumb__text">
                                 <h2>Organi Shop</h2>
                                 <div className="breadcrumb__option">
-                                    <Link to="./index.html">Home</Link>
+                                    <Link to="./">Home</Link>
                                     <span>Shop</span>
                                 </div>
                             </div>
