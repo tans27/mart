@@ -1,5 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const cors = require("cors");
+
 const authRouter = require("./routers/auth")
 const categoryRouter = require("./routers/category")
 const productRouter = require("./routers/product")
@@ -20,6 +22,7 @@ connectDB()
 
 const app = express();
 app.use(express.json())
+app.use(cors())
 
 app.use('/api/auth',authRouter);
 app.use('/api/category',categoryRouter);

@@ -34,8 +34,8 @@ const UserSchema = new Schema({
         required: true,
     },
     usertype: {
-        type: Number,
-        enum: [0, 1]
+        type: String,
+        enum: ['per_admin', 'per_user']
     },
     createdAt: {
         type: Date,

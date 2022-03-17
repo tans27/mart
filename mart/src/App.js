@@ -8,13 +8,13 @@ import Signup from "./components/page/site/signup/SignUp";
 class App extends React.Component {
   render() {
     return (
-      <Router>
-        <Routes>
-          <Route path="*" element={<SiteLayout />} />
-          <Route path="login" element={<Login />}/>
-          <Route path="signup" element={<Signup />} />
-        </Routes>
-      </Router>
+        <Router>
+          <Routes>
+            <Route path="*" element={<SiteLayout />} />
+            <Route path="login" element={<Login />} />
+            <Route path="signup" element={<Signup />} />
+          </Routes>
+        </Router>
     );
   }
 }

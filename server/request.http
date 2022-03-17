@@ -50,3 +50,16 @@ Content-Type: application/json
 {
     "category":"Khan giay"
 }
+###
+PUT http://localhost:5000/api/product/6231afa0a9278d714694aa7c
+Content-Type: application/json
+
+{
+    "name":"Khan giay 4 update",
+    "category":"Khan giay 4 update",
+    "price": 50000,
+    "url":"khangiay4",
+    "description": "updated khan giay 4"
+}
+###
+DELETE  http://localhost:5000/api/product/6231afa0a9278d714694aa7c

@@ -1,4 +1,4 @@
-import React,{ useState} from 'react';
+// import React,{ useState} from 'react';
 import {Link } from 'react-router-dom'
 
 
@@ -14,26 +14,30 @@ const Signup = (props) => {
                     <form method="POST" className="register-form" id="register-form">
                         <div className="form-group">
                             <label htmlFor="name"><i className="zmdi zmdi-account material-icons-name"></i></label>
-                            <input type="text" name="name" id="name" placeholder="Your Name"/>
+                            <input className="form-input" type="text" name="name" id="name" placeholder="Your Name"/>
                         </div>
                         <div className="form-group">
                             <label htmlFor="email"><i className="zmdi zmdi-email"></i></label>
-                            <input type="email" name="email" id="email" placeholder="Your Email"/>
+                            <input className="form-input" type="email" name="email" id="email" placeholder="Your Email"/>
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="phone"><i className="zmdi zmdi-phone"></i></label>
+                            <input className="form-input" type="tel" name="phone" id="phone" placeholder="Your Phone Number"/>
                         </div>
                         <div className="form-group">
                             <label htmlFor="pass"><i className="zmdi zmdi-lock"></i></label>
-                            <input type="password" name="pass" id="pass" placeholder="Password"/>
+                            <input className="form-input" type="password" name="pass" id="pass" placeholder="Password"/>
                         </div>
                         <div className="form-group">
                             <label htmlFor="re-pass"><i className="zmdi zmdi-lock-outline"></i></label>
-                            <input type="password" name="re_pass" id="re_pass" placeholder="Repeat your password"/>
+                            <input className="form-input" type="password" name="re_pass" id="re_pass" placeholder="Repeat your password"/>
                         </div>
                         <div className="form-group">
-                            <input type="checkbox" name="agree-term" id="agree-term" className="agree-term" />
+                            <input className="form-input agree-term" type="checkbox" name="agree-term" id="agree-term" />
                             <label htmlFor="agree-term" className="label-agree-term"><span><span></span></span>I agree all statements in  <Link to="#" className="term-service">Terms of service</Link></label>
                         </div>
                         <div className="form-group form-button">
-                            <input type="submit" name="signup" id="signup" className="form-submit" value="Register"/>
+                            <input className="form-input form-submit" type="submit" name="signup" id="signup"  value="Register"/>
                         </div>
                     </form>
                 </div>
