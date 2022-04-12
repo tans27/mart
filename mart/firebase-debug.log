@@ -1,0 +1,21 @@
+[debug] [2022-04-12T03:56:41.857Z] ----------------------------------------------------------------------
+[debug] [2022-04-12T03:56:41.858Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\trung\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-04-12T03:56:41.858Z] CLI Version:   10.6.0
+[debug] [2022-04-12T03:56:41.858Z] Platform:      win32
+[debug] [2022-04-12T03:56:41.858Z] Node Version:  v16.14.2
+[debug] [2022-04-12T03:56:41.859Z] Time:          Tue Apr 12 2022 10:56:41 GMT+0700 (Indochina Time)
+[debug] [2022-04-12T03:56:41.859Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-04-12T03:56:41.864Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-04-12T03:56:41.864Z] > authorizing via signed-in user (trunganhcoder@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  D:\Coding\bibo-mart\mart
+
