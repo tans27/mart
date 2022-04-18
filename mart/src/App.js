@@ -1,5 +1,24 @@
 import React from 'react';
 import { Link} from 'react-router-dom'
+import logo from './assets/img/logo.png'
+import signupImage from './assets/img/signup-image.jpg'
+import signinImage from './assets/img/signin-image.jpg'
+import breadcrumb from './assets/img/breadcrumb.jpg'
+import language from './assets/img/language.png'
+import paymentItem from './assets/img/payment-item.png'
+import blog1 from './assets/img/blog/blog-1.jpg'
+import blog2 from './assets/img/blog/blog-2.jpg'
+import blog3 from './assets/img/blog/blog-3.jpg'
+import blog4 from './assets/img/blog/blog-4.jpg'
+import blog5 from './assets/img/blog/blog-5.jpg'
+import blog6 from './assets/img/blog/blog-6.jpg'
+import detailsHero from './assets/img/blog/details/details-hero.jpg'
+import detailsAuthor from './assets/img/blog/details/details-author.jpg'
+import detailsPic from './assets/img/blog/details/details-pic.jpg'
+import sr1 from './assets/img/blog/sidebar/sr-1.jpg'
+import sr2 from './assets/img/blog/sidebar/sr-2.jpg'
+import sr3 from './assets/img/blog/sidebar/sr-3.jpg'
+import banner from './assets/img/hero/banner.jpg'
 
 const App = () =>{
     return (

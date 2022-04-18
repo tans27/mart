@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Loading.module.css"
 
 function Loading() {
-  return (
+  return (   
     <div className={styles.ball}>
       <div></div>
       <div></div>
